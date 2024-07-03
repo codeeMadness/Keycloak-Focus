@@ -1,5 +1,5 @@
 const keycloak = new Keycloak({
-  url: "http://localhost:8080",
+  url: "https://keycloak.sbot.pro",
   realm: "hang",
   clientId: "mydemoclient",
 });
