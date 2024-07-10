@@ -1,18 +1,18 @@
-const axios = require('axios');
+const axios = require("axios");
 
 const data = {
-    'grant_type': 'password',
-    'client_id': 'admin-cli',
-    'scope': 'openid',
-    'username': 'hang.nguyen',
-    'password': 'P@assword'
+    "grant_type": "password",
+    "client_id": "admin-cli",
+    "scope": "openid",
+    "username": "hang.nguyen",
+    "password": "P@assword"
 }
 
-const url = 'https://keycloak.sbot.pro/realms/master/protocol/openid-connect/token';
+const url = "https://keycloak.sbot.pro/realms/master/protocol/openid-connect/token";
 
 axios.post(url, data, {
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            "Content-Type": "application/x-www-form-urlencoded"
         }
     })
   .then((response) => {
