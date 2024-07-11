@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="./assets/css/styles.css">
+        <script src="https://keycloak.sbot.pro/js/keycloak.js"></script>
         <script src="./assets/js/myLogic.js"></script>
         <style>
             table {
@@ -22,16 +23,6 @@
     <body class="center" onload="initKeycloak()">
         <div id="header">
             <h1 id="headerLabel" align="center">Keycloak Demo</h1>
-        </div>
-
-        <div id="table-attr">
-
-        </div>
-
-        <div class="center" d="content" style="margin-top: 20px;">
-            <input type="button" value="Login" onclick="login()" />
-            <input type="button" value="Logout" onclick="logout()" />
-            <input type="button" value="Check Access" onclick="checkAccess()" />
         </div>
 
         
@@ -73,6 +64,9 @@
                 <!-- <label style="color: white;">Refresh Token</label>
                 <textarea id="ta-refreshToken">EMPTY</textarea> -->
             </div>
+            
+            <input type="button" value="Update Token" onclick="refreshToken()" />
+            <input type="button" value="Check Access" onclick="checkAccess()" />
 
             <div style="margin-top: 5px;">
                 <textarea rows="5" cols="100" id="check-access">ACCESS RESULT</textarea>
