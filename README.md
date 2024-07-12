@@ -32,6 +32,11 @@ Có rất nhiều các mô hình để làm việc với Keycloak. Tuy nhiên v�
 8. **Hiển thị kết quả cho người dùng**: 
 - Ứng dụng di động hiển thị thông báo cho người dùng về kết quả đăng ký
 
+### Quy trình Xác thực người dùng
+1. **API Gateway**: Nhận yêu cầu từ người dùng.
+2. **Lambda**: Xử lý yêu cầu và gửi mã OTP qua SMS.
+3. **Keycloak**: Quản lý xác thực và mã OTP.
+
 <h1>Cách configure trên Keycloak</h1>
 
 ### Best Practice: 
