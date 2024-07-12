@@ -2,12 +2,12 @@ const axios = require("axios");
 
 const handler = async () => {
   const data = {
-    "grant_type": "password",
+    "grant_type": "client_credentials",
     "client_id": "mydemoclient",
     "client_secret": "u99JjZe5HN4QiNt9Mms5oQrfPdSOPjC3",
-    "scope": "openid",
-    "username": "e.ngvan",
-    "password": "P@assword"
+    // "scope": "openid",
+    // "username": "hang.nguyen",
+    // "password": "P@assword"
   }
 
   const url = "https://keycloak.sbot.pro/realms/hang/protocol/openid-connect/token";

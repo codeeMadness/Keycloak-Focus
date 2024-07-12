@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "d3702813-7885-47bf-9196-0064a4eb633c",
+		"name": "Keycloak Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21698452"
+	},
+	"item": [
+		{
+			"name": "1. Login Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \t\"client_id\": \"mydemoclient\",\r\n  \t\t\"client_secret\": \"u99JjZe5HN4QiNt9Mms5oQrfPdSOPjC3\",\r\n  \t\t\"grant_type\": \"client_credentials\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/login"
+			},
+			"response": []
+		},
+		{
+			"name": "2. Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"f.ngvan\",\r\n  \"email\": \"f.ngvan@mail.com\",\r\n  \"firstName\": \"F\",\r\n  \"lastName\": \"Nguyen Van\",\r\n  \"password\": \"P@assword\",\r\n  \"client_access_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjYmFHSTNUdXBnbTctVlNJQ1cyTDUxT2x5UzZCS0k2RzAtbUttdDI3T1o0In0.eyJleHAiOjE3MjA3NTY1NjMsImlhdCI6MTcyMDc1NjI2MywianRpIjoiODdlMTVmMGUtZTg4NC00ZjJlLWJiMGQtMDM0NjAyMzBlZTAzIiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zYm90LnByby9yZWFsbXMvaGFuZyIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYWNjb3VudCJdLCJzdWIiOiI5MGQ0NTdlNS0yODA4LTQ4NzEtODQzNy04OWU5YmMyNzVkODYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJteWRlbW9jbGllbnQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iLCJkZWZhdWx0LXJvbGVzLWhhbmciXX0sInJlc291cmNlX2FjY2VzcyI6eyJyZWFsbS1tYW5hZ2VtZW50Ijp7InJvbGVzIjpbIm1hbmFnZS11c2VycyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgQ3VzdG9tX1Njb3BlIHByb2ZpbGUgZW1haWwgQ3VzdG9tX0NsYWltcyIsImNsaWVudEhvc3QiOiIxMC4wLjM3LjI0OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW15ZGVtb2NsaWVudCIsImNsaWVudEFkZHJlc3MiOiIxMC4wLjM3LjI0OCIsImNsaWVudF9pZCI6Im15ZGVtb2NsaWVudCJ9.c4FCHDonbzUGlqkwCpgnRpqq2N9JRC1OehaDcjYSyl2JRP-TUrb5jNPg-6ikDxyc9Bx49ItvRhAoFsc7R73QIgbGCTRO_bvjwQgPmxGoY85Cb8ov3s_n3NM1feHEqM6heQu2akHPplVExqSBmJm9e95tWmlEl-F08SlB-1T2Y62pmyql6CNjFuifgKe3xA2Y_FvjkEedgU2txzNExHKcgy1LeQWtJh0xG_2qFunm6qgmmLOPyaSxTOM0vEb9rjtfkKkHk5weFg3hT4JVkGrX7EsasNEXxfT_tb8OKyppW3UcbUeTsYadriqdHyOpdsbcewAZllnK9KF_NcwuQaj-wg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/register"
+			},
+			"response": []
+		},
+		{
+			"name": "3. Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \t\"grant_type\": \"password\",\r\n        \"client_id\": \"mydemoclient\",\r\n        \"client_secret\": \"u99JjZe5HN4QiNt9Mms5oQrfPdSOPjC3\",\r\n        \"username\": \"f.ngvan\",\r\n        \"password\": \"P@assword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/login"
+			},
+			"response": []
+		}
+	]
+}
