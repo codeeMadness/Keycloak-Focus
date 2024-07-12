@@ -53,8 +53,14 @@ Về cách tạo Realm và client trong Realm có thể tham khảo nhiều ngu�
 
 File import để testing trên Postman: [Tại đây](https://github.com/codeeMadness/Keycloak-Focus/blob/main/Keycloak-Demo.json)
 
+[Login Client](#login-client)
+
+[Register User](#register)
+
+[Login User](#login-user)
+
 ===========================================
-<h3>Login Client:</h3>
+### <a name="login-client"></a>Login Client
 
 **Endpoint:** https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/login
 
@@ -67,7 +73,7 @@ File import để testing trên Postman: [Tại đây](https://github.com/codeeM
 **Return:** 200 {Client-Access Token}
 
 ================================================================
-<h3>Register User:</h3>
+### <a name="register"></a>Register User
 
 **Endpoint:** https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/register
 
@@ -83,7 +89,7 @@ File import để testing trên Postman: [Tại đây](https://github.com/codeeM
 **Return:** 200 {"User created"}
 
 ====================================================================================
-<h3>Login User:</h3>
+### <a name="login-user"></a>Login User
 
 **Endpoint:** https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/login
 
