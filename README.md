@@ -51,7 +51,7 @@ Về cách tạo Realm và client trong Realm có thể tham khảo nhiều ngu�
 
 <h1>Thông tin về các Rest API</h1>
 
-File import để testing trên Postman: [Here](https://github.com/codeeMadness/Keycloak-Focus/blob/main/Keycloak-Demo.json)
+File import để testing trên Postman: [Tại đây](https://github.com/codeeMadness/Keycloak-Focus/blob/main/Keycloak-Demo.json)
 
 **Login Client:**
 
