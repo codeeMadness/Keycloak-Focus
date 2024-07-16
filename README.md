@@ -58,24 +58,10 @@ Về cách tạo Realm và client trong Realm có thể tham khảo nhiều ngu�
 
 File import để testing trên Postman: [Tại đây](https://github.com/codeeMadness/Keycloak-Focus/blob/main/Keycloak-Demo.json)
 
-[Login Client](#login-client)
-
 [Register User](#register)
 
 [Login User](#login-user)
 
-===========================================
-### <a name="login-client"></a>Login Client
-
-**Endpoint:** https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/login
-
-**Body:** {
-      	"client_id": <yourclientid>,
-  	"client_secret": <yourclientsecret>,
-  	"grant_type": "client_credentials"
-}
- 
-**Return:** 200 {Client-Access Token}
 
 ================================================================
 ### <a name="register"></a>Register User
@@ -83,12 +69,14 @@ File import để testing trên Postman: [Tại đây](https://github.com/codeeM
 **Endpoint:** https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/register
 
 **Body:** {
+  "realm": <your_realm>,
+  "client_id": <your_client_id>,
+  "client_secret": <your_client_secret>,
   "username": <username>,
   "email": <email>,
-  "firstName": <First Name>,
-  "lastName": <Last Name>,
-  "password": <password>,
-  "client_access_token": <Client-Access Token> (from Login Client)
+  "firstName": <first_name>,
+  "lastName": <last_name>,
+  "password": <password>
 }
  
 **Return:** 200 {"User created"}
@@ -99,9 +87,10 @@ File import để testing trên Postman: [Tại đây](https://github.com/codeeM
 **Endpoint:** https://5y6hrjzgsh.execute-api.ap-southeast-1.amazonaws.com/dev/login
 
 **Body:** {
+       "realm": <your_realm>,
        "grant_type": "password",
-       "client_id": <yourclientid>,
-       "client_secret": <yourclientsecret>,
+       "client_id": <your_client_id>,
+       "client_secret": <your_client_secret>,
        "username": <username>,
        "password": <password>
 }
